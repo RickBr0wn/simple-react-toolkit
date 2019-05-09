@@ -1,22 +1,4 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import ExampleComponent from './components/ExampleComponent'
+import CssReset from './components/CssReset'
 
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export { ExampleComponent, CssReset }
