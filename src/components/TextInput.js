@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const StyledTextInput = styled.input`
   font-size: 1.5rem;
+  margin: 5px;
   font-family: inherit;
   color: inherit;
   padding: 1.5rem 2rem;
@@ -12,7 +13,7 @@ const StyledTextInput = styled.input`
   border: none;
   border-bottom: 3px solid transparent;
   width: ${props => props.inputWidth || '100%'};
-  display: block;
+  display: border-box;
   transition: all 0.3s;
 
   :focus {
@@ -49,14 +50,14 @@ const StyledTextInput = styled.input`
 // `
 
 const TextInput = props => {
-  const { type, inputColor, inputWidth } = props
+  const { type, inputColor, inputWidth, placeholder } = props
   return (
     <div>
       <StyledTextInput
         type={type}
         inputColor={inputColor}
         inputWidth={inputWidth}
-        placeholder={type}
+        placeholder={placeholder}
       />
       {/* <StyledLabel for={type}>{type}</StyledLabel> */}
     </div>
@@ -66,7 +67,8 @@ const TextInput = props => {
 TextInput.propTypes = {
   inputColor: PropTypes.func,
   inputWidth: PropTypes.string,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string
 }
 
 export default TextInput

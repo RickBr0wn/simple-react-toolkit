@@ -7,7 +7,10 @@ const StyledButton = styled.button`
   margin: 1em;
   padding: 0.25em 1em;
   border-radius: 3px;
-  background-color: ${props => props.theme.primary || '#4286f4'};
+  background-color: ${props => props.backgroundColor || '#4286f4'};
+  color: ${props => props.textColor || '#fff'};
+  height: ${props => props.height || '50px'};
+  width: ${props => props.width || '100px'};
 
   :focus {
     outline: none;
@@ -15,11 +18,24 @@ const StyledButton = styled.button`
 `
 
 const Button = props => {
-  return <StyledButton>{props.name ? props.name : 'submit'}</StyledButton>
+  const { backgroundColor, textColor, height, width } = props
+  return (
+    <StyledButton
+      backgroundColor={backgroundColor}
+      textColor={textColor}
+      height={height}
+      width={width}>
+      {props.name ? props.name : 'submit'}
+    </StyledButton>
+  )
 }
 
 Button.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  textColor: PropTypes.string,
+  height: PropTypes.string,
+  width: PropTypes.string
 }
 
 export default Button

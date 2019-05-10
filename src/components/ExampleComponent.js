@@ -11,7 +11,9 @@ const StyledExampleComponent = styled.div`
 
 function ExampleComponent({ text }) {
   return (
-    <StyledExampleComponent>Example Components: {text}</StyledExampleComponent>
+    <StyledExampleComponent>
+      Simple React Toolkit: {text}
+    </StyledExampleComponent>
   )
 }
 
