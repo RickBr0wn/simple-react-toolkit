@@ -4,14 +4,14 @@ import styled from 'styled-components'
 
 const StyledExampleComponent = styled.div`
   display: inline-block;
-  margin: 2em auto;
+  margin: 1em auto;
   border: 2px solid #000;
-  font-size: 3em;
+  font-size: 2em;
 `
 
 function ExampleComponent({ text }) {
   return (
-    <StyledExampleComponent>Example Component: {text}</StyledExampleComponent>
+    <StyledExampleComponent>Example Components: {text}</StyledExampleComponent>
   )
 }
 

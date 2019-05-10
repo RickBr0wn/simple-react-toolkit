@@ -1,7 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ThemeProvider } from 'styled-components'
 
 import './index.css'
-import App from './App'
+import Demo from './Demo'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const theme = {
+  primary: '#a04ed9'
+}
+
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <Demo />
+  </ThemeProvider>,
+  document.getElementById('root')
+)
