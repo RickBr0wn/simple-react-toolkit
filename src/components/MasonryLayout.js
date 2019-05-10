@@ -12,7 +12,7 @@ const MasonryLayout = ({ children, columns, gap, padding }) => {
   const result = []
 
   if (columns === 'auto') {
-    columns = 4
+    columns = 1
   }
 
   // create number of columns from props

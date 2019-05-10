@@ -4,13 +4,16 @@ import {
   CssReset,
   TextInput,
   Button,
-  MasonryLayout
+  MasonryLayout,
+  StyledBlankDiv,
+  RockerSwitch
 } from 'simple-react-toolkit'
 
 const App = () => (
   <div>
     <CssReset />
     <ExampleComponent text='Modern Styled React Component Modules' />
+    <RockerSwitch />
     <TextInput
       inputColor='#4286f4'
       inputWidth='100%'
@@ -25,21 +28,11 @@ const App = () => (
       width='100px'
     />
     <MasonryLayout columns={4} gap={2} padding='0 10rem'>
+      {/* Map thru an array of images, and for each 'image' return a JSX element.
+          For demo purposes, I have used StyledBlankDiv, to demonstrate different height columns */}
       {[...Array(24).keys()].map((item, index) => {
-        const height = 250 + Math.ceil(Math.random() * 350)
-        return (
-          <div
-            style={{
-              height: `${height}px`,
-              background: 'rgba(0, 0, 255, 0.3)',
-              padding: '1.2rem',
-              fontSize: '2.4rem',
-              fontWeight: 'bolder',
-              color: '#fff'
-            }}>
-            {index + 1}
-          </div>
-        )
+        const height = `${250 + Math.ceil(Math.random() * 350)}px`
+        return <StyledBlankDiv height={height}>{index + 1}</StyledBlankDiv>
       })}
     </MasonryLayout>
   </div>
