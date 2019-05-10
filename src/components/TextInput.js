@@ -54,7 +54,7 @@ const TextInput = props => {
   return (
     <div>
       <StyledTextInput
-        type={type}
+        type={type || 'text'}
         inputColor={inputColor}
         inputWidth={inputWidth}
         placeholder={placeholder}
@@ -65,9 +65,9 @@ const TextInput = props => {
 }
 
 TextInput.propTypes = {
-  inputColor: PropTypes.func,
+  inputColor: PropTypes.string,
   inputWidth: PropTypes.string,
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   placeholder: PropTypes.string
 }
 

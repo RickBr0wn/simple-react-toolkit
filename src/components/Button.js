@@ -11,12 +11,23 @@ const StyledButton = styled.button`
   color: ${props => props.textColor || '#fff'};
   height: ${props => props.height || '50px'};
   width: ${props => props.width || '100px'};
+  text-transform: uppercase;
 
   :focus {
     outline: none;
   }
 `
 
+/**
+ * A fully customizable button component.
+ *
+ * @param {string}      backgroundColor Optional parameter.
+ * @param {string}      textColor       Optional parameter.
+ * @param {string}      height          Optional parameter.
+ * @param {string}      width           Optional parameter.
+ *
+ * @returns {Object}
+ */
 const Button = props => {
   const { backgroundColor, textColor, height, width } = props
   return (
