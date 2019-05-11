@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/simple-react-toolkit.svg?style=flat)](https://www.npmjs.com/package/simple-react-toolkit) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Install
+## Installation
 
 ```bash
 npm install --save simple-react-toolkit
@@ -12,12 +12,12 @@ npm install --save simple-react-toolkit
 
 ## Table of Contents
 
-1. [CSS_Reset](#css_reset)
+1. [CssReset](#CssReset)
 2. [Masonry Layout](#masonrylayout)
 
-## CSS_Reset
+## CssReset
 
-This simple CSS_Reset component injects the following `.css` file into your project, via the `<CSS_Reset>` wrapper
+This simple CssReset component injects the following `.css` file into your project, via the `<CssReset>` wrapper
 
 ```css
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,700');
@@ -46,28 +46,25 @@ body {
 }
 ```
 
-I have always tried to keep my code DRY, so I figured this would be a great place to kick off the basic toolbox..
-
 ## Usage
 
-Once installed (see [Installation](#installation)), the `<CSS_Reset>` component can simply be used like this:
+Once installed (see [Installation](#installation)), the `<CssReset>` component can simply be used like this:
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import { CssReset } from 'simple-react-toolbox'
 
-import { CSS_Reset } from 'simple-react-toolbox'
-
-class Example extends Component {
-  render() {
+const App = () => {
     return (
       <>
-        <CSS_Reset>
-          {the rest of your site goes here}
-        </CSS_Reset>
+        <CssReset />
+        {/** The rest of your site goes here */}
       </>
     )
-  }
 }
+
+export default App
+
 ```
 
 ## MasonryLayout
@@ -76,13 +73,12 @@ blah..
 
 ## Todo
 
-1. Add tests for CSS_Reset
-2. Add functionality to CSS_Reset to allow for a different background color.
-3. Add functionality to CSS_Reset to allow for a different default font
-4. Add Masonry Layout documentation
-5. Add API_Fetch documentation
-6. Add test suite
-7. Convert API_Fetch to funcitonal component
+1. Add tests for CssReset
+2. Add functionality to CssReset to allow for a different default font
+3. Add Masonry Layout documentation
+4. Add API_Fetch & documentation
+5. Add test suite
+6. Convert API_Fetch to funcitonal component
 
 ## License
 
