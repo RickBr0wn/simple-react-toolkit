@@ -1,3 +1,10 @@
+# TODO:
+  - [ ] Add Darkmode
+  - [ ] Complete Rocker switch logic
+  - [ ] Complete README.md
+  - [ ] Complete demo site
+  - [ ] Add tests to all modules
+
 # simple-react-toolkit
 
 > Modern Styled React Component Modules.
