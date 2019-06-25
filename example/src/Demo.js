@@ -1,5 +1,7 @@
 import React from 'react'
+import marked from 'marked'
 import hero from './images/hero.jpg'
+import MD from './images/MD.md'
 import {
   ExampleComponent,
   CssReset,
@@ -34,6 +36,7 @@ const App = () => (
       </h3>
     </div>
     {/* <ExampleComponent text='Modern Styled React Component Modules' /> */}
+    <div dangerouslySetInnerHTML={{ __html: marked(MD) }} />
     <RockerSwitch />
     <ToggleSwitch activeColor='#003dda' />
     <ToggleSwitch />
@@ -61,6 +64,7 @@ const App = () => (
       textColor='#fff'
       height='50px'
       width='100px'
+      uppercase={false}
     />
     <Button
       name='Cancel'

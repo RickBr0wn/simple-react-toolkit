@@ -17,10 +17,10 @@ npm install --save simple-react-toolkit
 
 ## CssReset
 
-This simple CssReset component injects the following `.css` file into your project, via the `<CssReset>` wrapper
+This simple CssReset component injects the following `.css` file into your project, via the self-enclosing `<CssReset />` wrapper
 
 ```css
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
 *,
 *::before,
@@ -42,8 +42,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
-  background-color: #eceff1;
-}
+  background-color: ${props => props.backgroundColor || '#ECEFF1'};
+  width: 100%;
+  }
 ```
 
 ## Usage
@@ -64,7 +65,6 @@ const App = () => {
 }
 
 export default App
-
 ```
 
 ## MasonryLayout
@@ -74,7 +74,7 @@ blah..
 ## Todo
 
 1. Add tests for CssReset
-2. Add functionality to CssReset to allow for a different default font
+2. Add functionality to CssReset to allow for a different default font & font size
 3. Add Masonry Layout documentation
 4. Add API_Fetch & documentation
 5. Add test suite

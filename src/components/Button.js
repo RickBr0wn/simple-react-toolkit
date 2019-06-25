@@ -6,7 +6,7 @@ const StyledButton = styled.button`
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
-  border-radius: 3px;
+  border-radius: ${props => props.borderRadius || '3px'};
   background-color: ${props => props.backgroundColor || '#4286f4'};
   color: ${props => props.textColor || '#fff'};
   height: ${props => props.height || '50px'};
@@ -29,13 +29,14 @@ const StyledButton = styled.button`
  * @returns {Object}
  */
 const Button = props => {
-  const { backgroundColor, textColor, height, width } = props
+  const { backgroundColor, textColor, height, width, borderRadius } = props
   return (
     <StyledButton
       backgroundColor={backgroundColor}
       textColor={textColor}
       height={height}
-      width={width}>
+      width={width}
+      borderRadius={borderRadius}>
       {props.name ? props.name : 'submit'}
     </StyledButton>
   )
@@ -46,7 +47,8 @@ Button.propTypes = {
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
   height: PropTypes.string,
-  width: PropTypes.string
+  width: PropTypes.string,
+  borderRadius: PropTypes.string
 }
 
 export default Button
