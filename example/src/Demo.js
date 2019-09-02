@@ -76,7 +76,7 @@ const App = () => (
     <MasonryLayout columns={4} gap={2} padding='0 10rem'>
       {[...Array(24).keys()].map((item, index) => {
         // Map thru an array of images, and for each 'image' return a JSX element.
-        //  For demo purposes, I have used StyledBlankDiv, to demonstrate different height columns
+        //  For demo purposes, I have used StyledBlankDiv, to demonstrate different height items.
         const height = `${250 + Math.ceil(Math.random() * 350)}px`
         return (
           <StyledBlankDiv key={index} height={height}>
